@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+
+html {
+  background: #0f0f0f;
+  color: rgba(255, 255, 245, 0.89);
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  @apply mt-16 mx-10;
+  font-size: 3.5rem;
+  line-height: 4.3rem;
+  font-weight: 700;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  .gradient {
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(72deg, #8e43ad, #d39ceb);
+  }
+}
+
+input,
+textarea {
+  color: rgba(255, 255, 245, 0.89);
+}
+
+.cheat-button {
+  @apply bg-gradient-to-r from-purple-600 to-purple-800 inline-block py-3 px-10 rounded-full cursor-pointer mt-12 uppercase font-bold hover:from-purple-700 hover:to-purple-900;
+  filter: drop-shadow(0px 0px 25px rgba(147, 51, 234, 1));
+}
